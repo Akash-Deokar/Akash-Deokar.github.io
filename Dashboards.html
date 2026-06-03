@@ -46,7 +46,7 @@
             
             <div class="bg-white rounded-3xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 border border-slate-100 flex flex-col group">
                 <div class="w-full bg-slate-900 relative pt-[56.25%] cursor-pointer group/video overflow-hidden" onclick="playVideo(this, '5DYZ-_G8_pY')">
-                    <img src="https://img.youtube.com/vi/5DYZ-_G8_pY/maxresdefault.jpg" alt="Indian Startups Dashboard" class="absolute top-0 left-0 w-full h-full object-cover transition-transform duration-500 group-hover/video:scale-105">
+                    <img src="https://img.youtube.com/vi/5DYZ-_G8_pY/hqdefault.jpg" alt="Indian Startups Dashboard" class="absolute top-0 left-0 w-full h-full object-cover transition-transform duration-500 group-hover/video:scale-105">
                     <div class="absolute inset-0 bg-black/10 transition-colors group-hover/video:bg-transparent"></div>
                     <div class="absolute inset-0 flex items-center justify-center">
                         <div class="w-16 h-12 bg-[#FF0000] rounded-xl flex items-center justify-center text-white shadow-lg transition-transform duration-300 group-hover/video:scale-110">
@@ -66,7 +66,7 @@
 
             <div class="bg-white rounded-3xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 border border-slate-100 flex flex-col group">
                 <div class="w-full bg-slate-900 relative pt-[56.25%] cursor-pointer group/video overflow-hidden" onclick="playVideo(this, '88gZXrMhhvc')">
-                    <img src="https://img.youtube.com/vi/88gZXrMhhvc/maxresdefault.jpg" alt="Global Defence Analytics" class="absolute top-0 left-0 w-full h-full object-cover transition-transform duration-500 group-hover/video:scale-105">
+                    <img src="https://img.youtube.com/vi/88gZXrMhhvc/hqdefault.jpg" alt="Global Defence Analytics" class="absolute top-0 left-0 w-full h-full object-cover transition-transform duration-500 group-hover/video:scale-105">
                     <div class="absolute inset-0 bg-black/10 transition-colors group-hover/video:bg-transparent"></div>
                     <div class="absolute inset-0 flex items-center justify-center">
                         <div class="w-16 h-12 bg-[#FF0000] rounded-xl flex items-center justify-center text-white shadow-lg transition-transform duration-300 group-hover/video:scale-110">
@@ -86,7 +86,7 @@
 
             <div class="bg-white rounded-3xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 border border-slate-100 flex flex-col group">
                 <div class="w-full bg-slate-900 relative pt-[56.25%] cursor-pointer group/video overflow-hidden" onclick="playVideo(this, 'aiC5-8RL0lU')">
-                    <img src="https://img.youtube.com/vi/aiC5-8RL0lU/maxresdefault.jpg" alt="Olympic Players Analytics" class="absolute top-0 left-0 w-full h-full object-cover transition-transform duration-500 group-hover/video:scale-105">
+                    <img src="https://img.youtube.com/vi/aiC5-8RL0lU/hqdefault.jpg" alt="Olympic Players Analytics" class="absolute top-0 left-0 w-full h-full object-cover transition-transform duration-500 group-hover/video:scale-105">
                     <div class="absolute inset-0 bg-black/10 transition-colors group-hover/video:bg-transparent"></div>
                     <div class="absolute inset-0 flex items-center justify-center">
                         <div class="w-16 h-12 bg-[#FF0000] rounded-xl flex items-center justify-center text-white shadow-lg transition-transform duration-300 group-hover/video:scale-110">
@@ -113,7 +113,6 @@
 
     <script>
         function playVideo(container, videoId) {
-            // Replace the thumbnail and play button with the actual YouTube iframe
             container.innerHTML = `
                 <iframe class="absolute top-0 left-0 w-full h-full" 
                         src="https://www.youtube.com/embed/${videoId}?autoplay=1&rel=0" 
@@ -123,10 +122,8 @@
                         allowfullscreen>
                 </iframe>
             `;
-            // Remove hover effects and cursor once playing
             container.classList.remove('cursor-pointer', 'group/video', 'overflow-hidden');
             container.onclick = null;
         }
     </script>
 </body>
-</html>
