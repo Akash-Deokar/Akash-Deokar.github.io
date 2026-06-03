@@ -45,14 +45,14 @@
         <div class="max-w-7xl mx-auto grid lg:grid-cols-3 gap-8">
             
             <div class="bg-white rounded-3xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 border border-slate-100 flex flex-col group">
-                <div class="w-full bg-slate-900 relative pt-[56.25%]">
-                    <iframe class="absolute top-0 left-0 w-full h-full" 
-                            src="https://www.youtube.com/embed/5DYZ-_G8_pY?rel=0" 
-                            title="Dashboard 1" 
-                            frameborder="0" 
-                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-                            allowfullscreen>
-                    </iframe>
+                <div class="w-full bg-slate-900 relative pt-[56.25%] cursor-pointer group/video overflow-hidden" onclick="playVideo(this, '5DYZ-_G8_pY')">
+                    <img src="https://img.youtube.com/vi/5DYZ-_G8_pY/maxresdefault.jpg" alt="Indian Startups Dashboard" class="absolute top-0 left-0 w-full h-full object-cover transition-transform duration-500 group-hover/video:scale-105">
+                    <div class="absolute inset-0 bg-black/10 transition-colors group-hover/video:bg-transparent"></div>
+                    <div class="absolute inset-0 flex items-center justify-center">
+                        <div class="w-16 h-12 bg-[#FF0000] rounded-xl flex items-center justify-center text-white shadow-lg transition-transform duration-300 group-hover/video:scale-110">
+                            <i class="fas fa-play text-xl ml-1"></i>
+                        </div>
+                    </div>
                 </div>
                 <div class="p-6 flex flex-col flex-grow">
                     <div class="flex gap-2 mb-3">
@@ -65,14 +65,14 @@
             </div>
 
             <div class="bg-white rounded-3xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 border border-slate-100 flex flex-col group">
-                <div class="w-full bg-slate-900 relative pt-[56.25%]">
-                    <iframe class="absolute top-0 left-0 w-full h-full" 
-                            src="https://www.youtube.com/embed/88gZXrMhhvc?rel=0" 
-                            title="Dashboard 2" 
-                            frameborder="0" 
-                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-                            allowfullscreen>
-                    </iframe>
+                <div class="w-full bg-slate-900 relative pt-[56.25%] cursor-pointer group/video overflow-hidden" onclick="playVideo(this, '88gZXrMhhvc')">
+                    <img src="https://img.youtube.com/vi/88gZXrMhhvc/maxresdefault.jpg" alt="Global Defence Analytics" class="absolute top-0 left-0 w-full h-full object-cover transition-transform duration-500 group-hover/video:scale-105">
+                    <div class="absolute inset-0 bg-black/10 transition-colors group-hover/video:bg-transparent"></div>
+                    <div class="absolute inset-0 flex items-center justify-center">
+                        <div class="w-16 h-12 bg-[#FF0000] rounded-xl flex items-center justify-center text-white shadow-lg transition-transform duration-300 group-hover/video:scale-110">
+                            <i class="fas fa-play text-xl ml-1"></i>
+                        </div>
+                    </div>
                 </div>
                 <div class="p-6 flex flex-col flex-grow">
                     <div class="flex gap-2 mb-3">
@@ -85,14 +85,14 @@
             </div>
 
             <div class="bg-white rounded-3xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 border border-slate-100 flex flex-col group">
-                <div class="w-full bg-slate-900 relative pt-[56.25%]">
-                    <iframe class="absolute top-0 left-0 w-full h-full" 
-                            src="https://www.youtube.com/embed/aiC5-8RL0lU?rel=0" 
-                            title="Dashboard 3" 
-                            frameborder="0" 
-                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-                            allowfullscreen>
-                    </iframe>
+                <div class="w-full bg-slate-900 relative pt-[56.25%] cursor-pointer group/video overflow-hidden" onclick="playVideo(this, 'aiC5-8RL0lU')">
+                    <img src="https://img.youtube.com/vi/aiC5-8RL0lU/maxresdefault.jpg" alt="Olympic Players Analytics" class="absolute top-0 left-0 w-full h-full object-cover transition-transform duration-500 group-hover/video:scale-105">
+                    <div class="absolute inset-0 bg-black/10 transition-colors group-hover/video:bg-transparent"></div>
+                    <div class="absolute inset-0 flex items-center justify-center">
+                        <div class="w-16 h-12 bg-[#FF0000] rounded-xl flex items-center justify-center text-white shadow-lg transition-transform duration-300 group-hover/video:scale-110">
+                            <i class="fas fa-play text-xl ml-1"></i>
+                        </div>
+                    </div>
                 </div>
                 <div class="p-6 flex flex-col flex-grow">
                     <div class="flex gap-2 mb-3">
@@ -111,5 +111,22 @@
         <p class="text-slate-400 text-sm font-medium">© 2026 Akash Deokar. <span class="opacity-50 mx-2">|</span> Built with Power BI & Tailwind</p>
     </footer>
 
+    <script>
+        function playVideo(container, videoId) {
+            // Replace the thumbnail and play button with the actual YouTube iframe
+            container.innerHTML = `
+                <iframe class="absolute top-0 left-0 w-full h-full" 
+                        src="https://www.youtube.com/embed/${videoId}?autoplay=1&rel=0" 
+                        title="Dashboard Video" 
+                        frameborder="0" 
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                        allowfullscreen>
+                </iframe>
+            `;
+            // Remove hover effects and cursor once playing
+            container.classList.remove('cursor-pointer', 'group/video', 'overflow-hidden');
+            container.onclick = null;
+        }
+    </script>
 </body>
 </html>
